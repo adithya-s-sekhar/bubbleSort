@@ -4,7 +4,7 @@ import { addNumbers, sortNumbers } from "./numbersSlice";
 import { useSelector } from "react-redux";
 
 const NumbersInput = () => {
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState('83,41,57,28,69,10,92,15,47,75,21,55,3,36,68,64,50,8,29,14,39,78,46,89,12,26,58,66,97,7');
     const dispatch = useDispatch();
     const numbers = useSelector(state => state.numbers?.list);
 
