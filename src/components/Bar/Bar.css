@@ -9,7 +9,7 @@
 .bar{
     background-color: blue;
     color: white;
-    width: 30px;
+    width: 20px;
     display: flex;
     align-items: flex-end;
     justify-content: center;

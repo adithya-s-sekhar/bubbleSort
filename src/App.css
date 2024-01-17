@@ -1,7 +1,10 @@
-
 .bar-chart{
+  width: 100vw;
+  overflow-x: scroll;
   display: flex;
-  max-height: 400px;
-  gap: 20px;
-  align-items: flex-end;
+  gap: 5px;
+}
+
+.app{
+  overflow: hidden;
 }
