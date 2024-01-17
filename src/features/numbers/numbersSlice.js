@@ -6,12 +6,10 @@ const numbersSlice = createSlice({
     reducers: {
         addNumbers(state,action) {
             state['list'] = action.payload.split(',').map(i => parseInt(i));
+            state['heights'] = calculateHeights(state.list).map(i => i);
         },
         sortNumbers(state) {
             bubbleSort(state.list);
-        },
-        createChart(state, action){
-            state['heights'] = calculateHeights(action.payload).map(i => i);
         }
     }
 })

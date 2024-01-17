@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux";
-import { addNumbers, sortNumbers, createChart } from "./numbersSlice";
+import { addNumbers, sortNumbers } from "./numbersSlice";
 import { useSelector } from "react-redux";
 
 const NumbersInput = () => {
@@ -21,10 +21,6 @@ const NumbersInput = () => {
         dispatch(sortNumbers());
     }
 
-    const handleChart = () => {
-        dispatch(createChart(numbers));
-    }
-
     const canSubmit = !Boolean(input);
     const canSort = !Boolean(numbers);
 
@@ -38,7 +34,6 @@ const NumbersInput = () => {
         />
         <button onClick={handleSubmit} disabled={canSubmit}>Submit</button>
         <button onClick={handleSort} disabled={canSort}>Sort</button>
-        <button onClick={handleChart} disabled={canSort}>Chart</button>
         </div>
     )
 }
