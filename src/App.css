@@ -1,0 +1,7 @@
+
+.bar-chart{
+  display: flex;
+  max-height: 400px;
+  gap: 20px;
+  align-items: flex-end;
+}

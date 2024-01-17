@@ -1,5 +1,5 @@
 import './App.css'
-import Chart from './features/chart/Chart'
+import BarChart from './features/charts/BarChart'
 import NumbersInput from './features/numbers/NumbersInput'
 import NumbersPreview from './features/numbers/NumbersPreview'
 
@@ -9,7 +9,7 @@ function App() {
     <div className="app">
       <NumbersInput />
       <NumbersPreview />
-      <Chart />
+      <BarChart />
     </div>
   )
 }

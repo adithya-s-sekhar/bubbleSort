@@ -1,0 +1,9 @@
+.bar{
+    background-color: blue;
+    color: white;
+    width: 30px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    justify-content: center;
+  }

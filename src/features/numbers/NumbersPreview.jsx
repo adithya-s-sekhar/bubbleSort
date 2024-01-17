@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 
 const NumbersPreview = () => {
-    const previewArray = useSelector(state => state.numbers.array);
+    const previewArray = useSelector(state => state.numbers?.list);
 
     return(
         <div>

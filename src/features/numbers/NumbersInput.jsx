@@ -1,13 +1,12 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux";
-import { addNumbers, sortNumbers } from "./numbersSlice";
+import { addNumbers, sortNumbers, createChart } from "./numbersSlice";
 import { useSelector } from "react-redux";
-import { createChart } from "../chart/chartSlice";
 
 const NumbersInput = () => {
     const [input, setInput] = useState('');
     const dispatch = useDispatch();
-    const numbers = useSelector(state => state.numbers?.array);
+    const numbers = useSelector(state => state.numbers?.list);
 
     const handleChange = (e) => {
         setInput(e.target.value);
