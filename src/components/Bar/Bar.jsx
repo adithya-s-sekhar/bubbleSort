@@ -1,9 +1,11 @@
 import "./Bar.css";
 
-const Bar = ({height, number}) => {
+const Bar = ({ number}) => {
     return(
-        <div className="bar" style={{height: height}}>
-            {number}
+        <div className="bar-bg">
+                <div>{number}</div>
+            <div className="bar" style={{height: number+`%`}}>
+            </div>
         </div>
     )
 }
