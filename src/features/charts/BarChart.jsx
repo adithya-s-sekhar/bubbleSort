@@ -12,15 +12,13 @@ const BarChart = () => {
             <div className="bar-chart">Empty</div>
         )
     } else {
-        for(let i = 0; i < numbers.length; i++){
-            content.push(<Bar number={numbers[i]}/>)
-        }
+        numbers.map(number => {
+            content.push(<Bar number={number} />)
+        })
         return(
         <div className="bar-chart">{content}</div>
         )
     }
-    
-
 }
 
 export default BarChart;
