@@ -5,7 +5,7 @@ const NumbersPreview = () => {
 
     return(
         <div>
-        <b>Array: </b> {previewArray && previewArray.map(item => item + ' ')}
+        <b>Array: </b> {previewArray && previewArray.map(item => item + '/')}
         </div>
     )
 }

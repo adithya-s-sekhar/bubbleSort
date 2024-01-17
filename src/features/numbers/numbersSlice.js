@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useEffect } from "react";
 
 const numbersSlice = createSlice({
     name: 'numbers',
@@ -21,7 +20,6 @@ const bubbleSort = (array) => {
         sorted = true;
         for( let i = 0; i < length; i++){
             if(array[i] > array[i+1]) {
-                console.log(`swapped ${array[i]} and ${array[i+1]}`);
                 [array[i], array[i+1]] = [array[i+1], array[i]];
                 sorted = false;
             }
