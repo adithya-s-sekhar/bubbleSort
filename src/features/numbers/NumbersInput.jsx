@@ -22,7 +22,7 @@ const NumbersInput = () => {
     }
 
     const canSubmit = !Boolean(input);
-    const canSort = !Boolean(numbers);
+    const canSort = !Boolean(numbers && canSubmit);
 
     return (
         <div>
