@@ -24,7 +24,7 @@ const NumbersInput = () => {
     const canSort = !Boolean(useSelector(state => state.numbers.array))
 
     return (
-        <>
+        <div>
         <input
             type="text"
             value={input}
@@ -33,7 +33,7 @@ const NumbersInput = () => {
         />
         <button onClick={handleSubmit} disabled={canSubmit}>Submit</button>
         <button onClick={handleSort} disabled={canSort}>Sort</button>
-        </>
+        </div>
     )
 }
 
