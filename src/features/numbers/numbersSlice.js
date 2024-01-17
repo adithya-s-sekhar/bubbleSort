@@ -5,7 +5,7 @@ const numbersSlice = createSlice({
     initialState: {},
     reducers: {
         addNumbers(state,action) {
-            state['array'] = action.payload;
+            state['array'] = action.payload.split(',').map(i => parseInt(i));
         },
         sortNumbers(state) {
             bubbleSort(state.array);
@@ -26,7 +26,6 @@ const bubbleSort = (array) => {
         }
     }
     while (!sorted);
-    
 }
 
 export const { addNumbers, sortNumbers } = numbersSlice.actions;

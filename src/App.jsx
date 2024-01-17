@@ -1,4 +1,5 @@
 import './App.css'
+import Chart from './features/chart/Chart'
 import NumbersInput from './features/numbers/NumbersInput'
 import NumbersPreview from './features/numbers/NumbersPreview'
 
@@ -8,6 +9,7 @@ function App() {
     <div className="app">
       <NumbersInput />
       <NumbersPreview />
+      <Chart />
     </div>
   )
 }

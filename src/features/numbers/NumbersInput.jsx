@@ -2,13 +2,15 @@ import { useState } from "react"
 import { useDispatch } from "react-redux";
 import { addNumbers, sortNumbers } from "./numbersSlice";
 import { useSelector } from "react-redux";
+import { createChart } from "../chart/chartSlice";
 
 const NumbersInput = () => {
     const [input, setInput] = useState('');
     const dispatch = useDispatch();
+    const numbers = useSelector(state => state.numbers?.array);
 
     const handleChange = (e) => {
-        setInput(e.target.value.split(','));
+        setInput(e.target.value);
     }
 
     const handleSubmit = () => {
@@ -20,8 +22,12 @@ const NumbersInput = () => {
         dispatch(sortNumbers());
     }
 
+    const handleChart = () => {
+        dispatch(createChart(numbers));
+    }
+
     const canSubmit = !Boolean(input);
-    const canSort = !Boolean(useSelector(state => state.numbers.array))
+    const canSort = !Boolean(numbers);
 
     return (
         <div>
@@ -33,6 +39,7 @@ const NumbersInput = () => {
         />
         <button onClick={handleSubmit} disabled={canSubmit}>Submit</button>
         <button onClick={handleSort} disabled={canSort}>Sort</button>
+        <button onClick={handleChart} disabled={canSort}>Chart</button>
         </div>
     )
 }
