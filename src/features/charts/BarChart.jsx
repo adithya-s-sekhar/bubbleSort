@@ -1,24 +1,18 @@
 import { useSelector } from "react-redux";
 import Bar from "../../components/Bar/Bar";
+import { useEffect } from "react";
 
 const BarChart = () => {
 
-    const numbers = useSelector(state => state.numbers?.list);
+    const numbers = useSelector(state => state.numbers.list);
 
-    let content = [];
-
-    if (!numbers){
-        return(
-            <div className="bar-chart">Empty</div>
-        )
-    } else {
-        numbers.map((number,index) => {
-            content.push(<Bar number={number} key={index}/>)
-        })
-        return(
-        <div className="bar-chart">{content}</div>
-        )
-    }
+    return(
+        <div className="bar-chart">
+            {numbers && numbers.map((number,index) => (
+                <Bar number={number} key={index}/>
+            ))}
+        </div>
+    )
 }
 
 export default BarChart;
